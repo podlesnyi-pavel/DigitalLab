@@ -1,0 +1,28 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    color: $color-title;
+  }
+}
+
+.logo {
+  height: 92px;
+  width: 160px;
+}
+
+.menu {
+  display: flex;
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 25px;
+    }
+  }
+
+  &__link {
+    color: $color-title;
+  }
+}

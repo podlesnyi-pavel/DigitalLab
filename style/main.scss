@@ -1,0 +1,12 @@
+@import './normilize';
+@import './utils/variables';
+@import './utils/fonts';
+@import './common/container';
+@import './common/button';
+@import './block/header';
+
+.page {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  color: $color-text;
+}
