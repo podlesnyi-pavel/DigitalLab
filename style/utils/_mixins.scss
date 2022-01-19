@@ -2,3 +2,9 @@
   font-family: "Acrobat";
   font-weight: 800;
 }
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
