@@ -1,11 +1,13 @@
 @import './normilize';
 @import './utils/variables';
-@import './utils/fonts';
 @import './utils/mixins';
+@import './utils/fonts';
 @import './common/container';
 @import './common/button';
+@import './common/title';
 @import './block/header';
 @import './sections/promo';
+@import './sections/about';
 
 .page {
   font-family: "Roboto Condensed", sans-serif;

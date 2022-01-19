@@ -1,0 +1,70 @@
+.about {
+  position: relative;
+  background-color: $color-bg-gray;
+  padding-bottom: 144px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 110px;
+    width: 100%;
+    background: url('../../images/decor-about.jpg') center/cover no-repeat;
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      width: calc(50% - 15px);
+    }
+  }
+
+  &__img {
+    max-height: 300px;
+  }
+
+  &__text {
+    margin-left: 30px;
+  }
+
+  &__advantages {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.advantage-card {
+  width: calc(33.3% - 20px);
+  padding: 20px;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 25px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    @include style-title;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 15px;
+  }
+}
