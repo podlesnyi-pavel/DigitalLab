@@ -195,6 +195,10 @@ a {
   margin-top: 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .page {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
