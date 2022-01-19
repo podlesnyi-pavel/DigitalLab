@@ -4,6 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 14px 0;
+    @include style-title;
+    font-size: 20px;
+    line-height: 24px;
     color: $color-title;
   }
 }
@@ -24,5 +27,19 @@
 
   &__link {
     color: $color-title;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    font-style: normal;
+    color: inherit;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
   }
 }

@@ -49,6 +49,10 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 14px 0;
+  font-family: "Acrobat";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
   color: #1A2437;
 }
 
@@ -67,6 +71,20 @@ a {
 
 .menu__link {
   color: #1A2437;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__link {
+  font-style: normal;
+  color: inherit;
+}
+
+.contacts__link:not(:first-child) {
+  margin-top: 15px;
 }
 
 .page {
