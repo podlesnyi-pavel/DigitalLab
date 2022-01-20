@@ -1,7 +1,7 @@
 @import './normilize';
 @import './utils/variables';
-@import './utils/mixins';
 @import './utils/fonts';
+@import './utils/mixins';
 @import './common/container';
 @import './common/button';
 @import './common/title';
@@ -10,6 +10,7 @@
 @import './sections/promo';
 @import './sections/about';
 @import './sections/products';
+@import './sections/order';
 @import './sections/footer';
 
 html {

@@ -5,4 +5,8 @@
   font-weight: 800;
   line-height: 72px;
   color: $color-title;
+
+  &--color--white {
+    color: $color-white;
+  }
 }

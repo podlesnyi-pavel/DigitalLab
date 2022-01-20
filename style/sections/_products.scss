@@ -11,8 +11,6 @@
 }
 
 .product-card {
-  $color-line: #E7E7E7;
-
   display: flex;
   flex-direction: column;
   width: 255px;
@@ -33,7 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 0 15px 20px;
-    border-top: 1px solid $color-line;
+    border-top: 1px solid $color-gray-line;
   }
 
   &__title {

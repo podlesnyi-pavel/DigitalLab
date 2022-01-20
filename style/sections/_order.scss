@@ -1,0 +1,51 @@
+.order {
+  padding: 204px 0 27px;
+  background: url('../images/order-bg.jpg') center/cover no-repeat;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    margin: 50px auto 0;
+    padding: 75px 80px;
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-top: 25px;
+    }
+
+    & > span {
+      margin-left: 15px;
+      @include style-title;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-title;
+    }
+  }
+
+  &__input {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 1px solid $color-gray-line;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: inherit;
+
+    &::placeholder {
+      color: $color-gray-line;
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+    align-self: center;
+  }
+}
