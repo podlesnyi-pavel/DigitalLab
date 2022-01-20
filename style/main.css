@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap");
+@font-face {
+  font-family: "Acrobat";
+  src: url("../fonts/Akrobat.woff2"), url("../fonts/Akrobat.woff");
+  font-weight: 800;
+  font-style: normal;
+  display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,14 +23,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-@font-face {
-  font-family: "Acrobat";
-  src: url("../fonts/Akrobat.woff2"), url("../fonts/Akrobat.woff");
-  font-weight: 800;
-  font-style: normal;
-  display: swap;
 }
 
 .container {
@@ -219,7 +219,7 @@ a {
 }
 
 .products {
-  padding-top: 8px;
+  padding: 8px 0 70px;
 }
 
 .products__products {
@@ -273,6 +273,114 @@ a {
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
+}
+
+.application {
+  background: linear-gradient(180deg, #fff 0%, #fff 10%, #F9F9FA 10%, #F9F9FA 100%);
+}
+
+.application__inner {
+  display: flex;
+  font-family: "Acrobat", sans-serif;
+  font-weight: 800;
+  color: #1A2437;
+}
+
+.application__img {
+  display: block;
+  max-height: 553px;
+  max-width: 400px;
+  margin-right: 76px;
+}
+
+.application__descr {
+  max-width: 542px;
+  padding: 97px 0 32px;
+}
+
+.application__title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 53px;
+}
+
+.application__subtitle {
+  margin-top: 35px;
+  font-size: 30px;
+  line-height: 36px;
+  color: #00A9E3;
+}
+
+.application__download-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+
+.application__list {
+  align-self: flex-end;
+}
+
+.application__item {
+  position: relative;
+  padding-left: 34px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.application__item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.application__item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #00A9E3;
+}
+
+.application__link {
+  color: #00A9E3;
+  text-decoration: underline;
+}
+
+.application__qr-code-wrapper {
+  height: 125px;
+  width: 125px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.application__qr-code {
+  width: 100%;
+}
+
+.application__download-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.application__download-button {
+  height: 80px;
+  width: calc(50% - 16px);
+  max-width: 255px;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.application__download-button--google {
+  background: url("../../images/application/google_play.svg") center/cover no-repeat;
+}
+
+.application__download-button--app {
+  background: url("../../images/application/app_store.svg") center/cover no-repeat;
 }
 
 .order {

@@ -1,0 +1,106 @@
+.application {
+  background: linear-gradient(180deg, $color-white 0%, $color-white 10%, $color-bg-gray 10%, $color-bg-gray 100%);
+
+  &__inner {
+    display: flex;
+    @include style-title;
+    color: $color-title;
+  }
+
+  &__img {
+    display: block;
+    max-height: 553px;
+    max-width: 400px;
+    margin-right: 76px;
+  }
+
+  &__descr {
+    max-width: 542px;
+    padding: 97px 0 32px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 44px;
+    line-height: 53px;
+  }
+
+  &__subtitle {
+    margin-top: 35px;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-blue;
+  }
+
+  &__download-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11px;
+  }
+
+  &__list {
+    align-self: flex-end;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 34px;
+    font-size: 20px;
+    line-height: 24px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: $color-blue;
+    }
+  }
+
+  &__link {
+    color: $color-blue;
+    text-decoration: underline;
+  }
+
+  &__qr-code-wrapper {
+    height: 125px;
+    width: 125px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: $color-white;
+  }
+
+  &__qr-code {
+    width: 100%;
+  }
+
+  &__download-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+
+  &__download-button {
+    height: 80px;
+    width: calc(50% - 16px);
+    max-width: 255px;
+    border-radius: 10px;
+    background-color: $color-black;
+
+    &--google {
+      background: url("../../images/application/google_play.svg") center/cover no-repeat;
+    }
+
+    &--app {
+      background: url("../../images/application/app_store.svg") center/cover no-repeat;
+    }
+  }
+}
