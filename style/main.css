@@ -65,7 +65,7 @@ a {
   color: #1A2437;
 }
 
-.header__inner {
+.nav__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,12 +74,21 @@ a {
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
-  color: #1A2437;
 }
 
 .logo {
-  height: 92px;
-  width: 160px;
+  height: 80px;
+  width: 140px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.logo--bgc--white {
+  background-color: #fff;
+}
+
+.logo__img {
+  width: 100%;
 }
 
 .menu {
@@ -91,7 +100,7 @@ a {
 }
 
 .menu__link {
-  color: #1A2437;
+  color: inherit;
 }
 
 .contacts {
@@ -106,6 +115,10 @@ a {
 
 .contacts__link:not(:first-child) {
   margin-top: 15px;
+}
+
+.header {
+  color: #1A2437;
 }
 
 .promo {
@@ -256,6 +269,16 @@ a {
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
+}
+
+.footer {
+  background-color: #1A2437;
+  color: #fff;
+}
+
+.footer__copyright {
+  position: relative;
+  left: -30px;
 }
 
 html {

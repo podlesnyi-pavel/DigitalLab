@@ -1,4 +1,4 @@
-.header {
+.nav {
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -7,13 +7,22 @@
     @include style-title;
     font-size: 20px;
     line-height: 24px;
-    color: $color-title;
   }
 }
 
 .logo {
-  height: 92px;
-  width: 160px;
+  height: 80px;
+  width: 140px;
+  padding: 6px 10px;
+  border-radius: 10px;
+
+  &--bgc--white {
+    background-color: $color-white;
+  }
+
+  &__img {
+    width: 100%;
+  }
 }
 
 .menu {
@@ -26,7 +35,7 @@
   }
 
   &__link {
-    color: $color-title;
+    color: inherit;
   }
 }
 

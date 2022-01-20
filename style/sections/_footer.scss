@@ -1,0 +1,9 @@
+.footer {
+  background-color: $color-title;
+  color: $color-white;
+
+  &__copyright {
+    position: relative;
+    left: -30px;
+  }
+}
