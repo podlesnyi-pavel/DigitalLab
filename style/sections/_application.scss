@@ -96,11 +96,11 @@
     background-color: $color-black;
 
     &--google {
-      background: url("../../images/application/google_play.svg") center/cover no-repeat;
+      background: url("../images/application/google_play.svg") center/cover no-repeat;
     }
 
     &--app {
-      background: url("../../images/application/app_store.svg") center/cover no-repeat;
+      background: url("../images/application/app_store.svg") center/cover no-repeat;
     }
   }
 }

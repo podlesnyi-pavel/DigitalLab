@@ -376,11 +376,51 @@ a {
 }
 
 .application__download-button--google {
-  background: url("../../images/application/google_play.svg") center/cover no-repeat;
+  background: url("../images/application/google_play.svg") center/cover no-repeat;
 }
 
 .application__download-button--app {
-  background: url("../../images/application/app_store.svg") center/cover no-repeat;
+  background: url("../images/application/app_store.svg") center/cover no-repeat;
+}
+
+.certificates__inner {
+  display: flex;
+  padding-top: 100px;
+}
+
+.certificates__descr {
+  max-width: 540px;
+}
+
+.certificates__text {
+  margin-top: 66px;
+}
+
+.certificates__text-item {
+  margin: 0;
+}
+
+.certificates__text-item:nth-child(2) {
+  margin-top: 16px;
+}
+
+.certificates__awards {
+  position: relative;
+  left: -20px;
+  margin-top: 53px;
+}
+
+.slider {
+  height: 550px;
+  width: 400px;
+  border: 2px solid #000;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.slider__line {
+  display: flex;
+  width: 1200px;
 }
 
 .order {

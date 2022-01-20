@@ -1,0 +1,41 @@
+.certificates {
+  &__inner {
+    display: flex;
+    padding-top: 100px;
+  }
+
+  &__descr {
+    max-width: 540px;
+  }
+
+  &__text {
+    margin-top: 66px;
+
+    &-item {
+      margin: 0;
+
+      &:nth-child(2) {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__awards {
+    position: relative;
+    left: -20px;
+    margin-top: 53px;
+  }
+}
+
+.slider {
+  height: 550px;
+  width: 400px;
+  border: 2px solid #000;
+  background-color: #000;
+  overflow: hidden;
+
+  &__line {
+    display: flex;
+    width: 400px * 3;
+  }
+}
