@@ -8,6 +8,7 @@
 @import './block/header';
 @import './sections/promo';
 @import './sections/about';
+@import './sections/products';
 
 html {
   scroll-behavior: smooth;
@@ -16,5 +17,6 @@ html {
 .page {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
+  line-height: 19px;
   color: $color-text;
 }
