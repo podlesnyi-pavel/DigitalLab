@@ -125,6 +125,69 @@ button {
   margin-top: 15px;
 }
 
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__btn {
+  height: 15px;
+  width: 50px;
+  border: none;
+}
+
+.slider__btn--left {
+  background: url("../images/arrowSlider.svg") center/contain no-repeat;
+}
+
+.slider__btn--right {
+  transform: rotate(180deg);
+  background: url("../images/arrowSlider.svg") center/contain no-repeat;
+}
+
+.slider__visible-content {
+  height: 500px;
+  width: 350px;
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+.slider__visible-content--reviews {
+  height: auto;
+  width: calc(445px * 2 + 30px);
+}
+
+.slider__line {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.slider__review {
+  min-height: 250px;
+  min-width: 445px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.slider__review:nth-child(2n) {
+  margin-left: 30px;
+}
+
+.slider__name {
+  font-family: "Acrobat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #00A9E3;
+}
+
+.slider__text {
+  margin-top: 14px;
+}
+
 .header {
   color: #1A2437;
 }
@@ -389,7 +452,7 @@ button {
 
 .certificates__inner {
   display: flex;
-  padding-top: 100px;
+  padding: 100px 0 80px;
 }
 
 .certificates__descr {
@@ -415,37 +478,25 @@ button {
   margin-top: 53px;
 }
 
-.slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.reviews {
+  position: relative;
+  padding: 110px 0 50px;
+  background-color: #F9F9FA;
 }
 
-.slider__btn {
-  height: 15px;
-  width: 50px;
-  border: none;
+.reviews::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110px;
+  width: 100%;
+  background: #fff url("../images/decorReviews.svg");
 }
 
-.slider__btn--left {
-  background: url("../images/arrowSlider.svg") center/contain no-repeat;
-}
-
-.slider__btn--right {
-  transform: rotate(180deg);
-  background: url("../images/arrowSlider.svg") center/contain no-repeat;
-}
-
-.slider__visible-content {
-  height: 550px;
-  width: 400px;
-  margin: 0 30px;
-  overflow: hidden;
-}
-
-.slider__line {
-  display: flex;
-  transition: transform 0.3s;
+.reviews__title {
+  position: relative;
+  top: -50px;
 }
 
 .order {
