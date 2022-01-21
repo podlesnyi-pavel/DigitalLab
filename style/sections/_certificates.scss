@@ -6,6 +6,7 @@
 
   &__descr {
     max-width: 540px;
+    margin-right: 45px;
   }
 
   &__text {
@@ -28,14 +29,34 @@
 }
 
 .slider {
-  height: 550px;
-  width: 400px;
-  border: 2px solid #000;
-  background-color: #000;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    height: 15px;
+    width: 50px;
+    border: none;
+    
+    &--left {
+      background: url('../images/arrowSlider.svg') center/contain no-repeat;
+    }
+
+    &--right {
+      transform: rotate(180deg);
+      background: url('../images/arrowSlider.svg') center/contain no-repeat;
+    }
+  }
+
+  &__visible-content {
+    height: 550px;
+    width: 400px;
+    margin: 0 30px;
+    overflow: hidden;
+  }
 
   &__line {
     display: flex;
-    width: 400px * 3;
+    transition: transform $transation-duration-default;
   }
 }

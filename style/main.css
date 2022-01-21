@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -390,6 +394,7 @@ a {
 
 .certificates__descr {
   max-width: 540px;
+  margin-right: 45px;
 }
 
 .certificates__text {
@@ -411,16 +416,36 @@ a {
 }
 
 .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__btn {
+  height: 15px;
+  width: 50px;
+  border: none;
+}
+
+.slider__btn--left {
+  background: url("../images/arrowSlider.svg") center/contain no-repeat;
+}
+
+.slider__btn--right {
+  transform: rotate(180deg);
+  background: url("../images/arrowSlider.svg") center/contain no-repeat;
+}
+
+.slider__visible-content {
   height: 550px;
   width: 400px;
-  border: 2px solid #000;
-  background-color: #000;
+  margin: 0 30px;
   overflow: hidden;
 }
 
 .slider__line {
   display: flex;
-  width: 1200px;
+  transition: transform 0.3s;
 }
 
 .order {
