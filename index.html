@@ -8,10 +8,10 @@
     <script defer src="./index.js"></script>
   </head>
   <body class="page">
-    <header class="header nav" id="header">
+    <header class="header actions actions--header" id="header">
       <div class="container">
-        <div class="nav__inner">
-          <a class="logo" href="#nav">
+        <div class="actions__inner">
+          <a class="logo" href="./">
             <img
               class="logo__img"
               src="./images/logo.svg"
@@ -36,12 +36,12 @@
             </ul>
           </nav>
 
-          <address class="contacts">
-            <a class="contacts__link" href="tel:+380957107222">
+          <address class="actions__contacts">
+            <a class="actions__contacts-link" href="tel:+380957107222">
               +380 (95) 710-7-222
             </a>
 
-            <a class="contacts__link" href="tel:+380967107222">
+            <a class="actions__contacts-link" href="tel:+380967107222">
               +380 (96) 710-7-222
             </a>
           </address>
@@ -50,6 +50,22 @@
         </div>
       </div>
     </header>
+    
+    <div class="actions actions--mobile">
+      <div class="container">
+        <div class="actions__inner actions__inner--mobile">
+          <a class="logo" href="./">
+            <img
+              class="logo__img"
+              src="./images/logo.svg"
+              alt="logo heavenly well"
+            >
+          </a>
+  
+          <button class="awd">X</button>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="promo">
@@ -354,7 +370,7 @@
                     На сайте
                     <a
                       class="application__link"
-                      href="nebesnakrinica.app11.io"
+                      href="http://nebesnakrinica.app11.io"
                     >
                       nebesnakrinica.app11.io
                     </a>
@@ -407,8 +423,13 @@
                 alt="awards"
               >
             </div>
+
             <div class="slider">
-              <button class="slider__btn slider__btn--left"></button>
+              <button class="
+                slider__btn
+                slider__btn--left
+                slider__btn--desktop"
+              ></button>
 
               <div class="slider__visible-content">
                 <div class="slider__line">
@@ -430,7 +451,16 @@
                 </div>
               </div>
 
-              <button class="slider__btn slider__btn--right"></button>
+              <div class="slider__btns">
+                <button class="slider__btn slider__btn--left"></button>
+                <button class="slider__btn slider__btn--right"></button>
+              </div>
+
+              <button class="
+                slider__btn
+                slider__btn--right
+                slider__btn--desktop"
+              ></button>
             </div>
           </div>
         </div>
@@ -544,10 +574,10 @@
       </section>
     </main>
 
-    <footer class="footer nav" id="footer">
+    <footer class="footer actions">
       <div class="container">
-        <div class="nav__inner">
-          <a class="logo logo--bgc--white" href="#nav">
+        <div class="actions__inner actions__inner--footer">
+          <a class="logo logo--bgc--white footer__logo" href="./">
             <img
               class="logo__img"
               src="./images/logo.svg"
@@ -555,7 +585,7 @@
             >
           </a>
 
-          <nav>
+          <nav class="nav">
             <ul class="menu">
               <li class="menu__item">
                 <a href="#about" class="menu__link">
@@ -580,15 +610,19 @@
             </ul>
           </nav>
 
-          <address class="contacts">
-            <a class="contacts__link" href="tel:+380957107222">
+          <address class="actions__contacts actions__contacts--footer">
+            <a class="actions__contacts-link" href="tel:+380957107222">
               +380 (95) 710-7-222
             </a>
 
-            <a class="contacts__link" href="tel:+380967107222">
+            <a class="actions__contacts-link" href="tel:+380967107222">
               +380 (96) 710-7-222
             </a>
           </address>
+
+          <div class="footer__copyright footer__copyright--mobile">
+            ©2021 Небесна Криниця. Все права защищены 
+          </div>
 
           <div class="footer__copyright">
             ©2021 Небесна Криниця. <br>

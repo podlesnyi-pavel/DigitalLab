@@ -2,8 +2,36 @@
   background-color: $color-title;
   color: $color-white;
 
+  &__logo {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
   &__copyright {
-    position: relative;
-    left: -30px;
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+
+    @media (min-width: 576px) {
+      font-size: 17px;
+    }
+
+    @media (min-width: 1045px) {
+      position: relative;
+      left: -30px;
+      display: block;
+      margin-top: 0;
+    }
+
+    &--mobile {
+      display: block;
+  
+      @media (min-width: 1045px) {
+        display: none;
+      }
+    }
   }
 }

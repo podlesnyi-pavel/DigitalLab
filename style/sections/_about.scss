@@ -1,49 +1,87 @@
+$height-decor: 110px;
+$height-decor-mobile: 50px;
+
 .about {
   position: relative;
   background-color: $color-bg-gray;
-  padding-bottom: 144px;
+  padding-bottom: $height-decor-mobile;
+
+  @media (min-width: 576px) {
+    padding-bottom: $height-decor + 34px;
+  }
 
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 110px;
+    height: $height-decor-mobile;
     width: 100%;
     background: url('../images/decor-about.jpg') center/cover no-repeat;
+
+    @media (min-width: 576px) {
+      height: $height-decor;
+    }
   }
 
   &__descr {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    @media (min-width: 992px) {
+      margin-top: 50px;
+    }
 
     &-item {
-      width: calc(50% - 15px);
+      width: 95%;
+
+      @media (min-width: 992px) {
+        width: calc(50% - 15px)
+      }
     }
   }
 
   &__img {
+    display: none;
     max-height: 300px;
+    
+    @media (min-width: 992px) {
+      display: block;
+    }
   }
 
   &__text {
-    margin-left: 30px;
+    @media (min-width: 992px) {
+      margin-left: 30px;
+    }
   }
 
   &__advantages {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 .advantage-card {
-  width: calc(33.3% - 20px);
-  padding: 20px;
+  flex-basis: 95%;
+  padding: 20px 0;
+  
+  @media (min-width: 576px) {
+    flex-basis: calc(33.3% - 20px);
+    min-width: 275px;
+    padding: 20px;
+  }
 
   &:not(:first-child) {
-    margin-left: 30px;
+    margin-left: 15px;
+
+    @media (min-width: 992px) {
+      margin-left: 30px;
+    }
   }
 
   &__top {

@@ -1,12 +1,37 @@
 .slider {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
+
+  &__btns {
+    display: flex;
+
+    @media (min-width: 576px) {
+      display: none;
+    }
+
+    & > :first-child {
+      margin-right: 40px;
+    }
+  }
 
   &__btn {
     height: 15px;
     width: 50px;
     border: none;
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: 576px) {
+        display: block;
+      }
+    }
     
     &--left {
       background: url('../images/arrowSlider.svg') center/contain no-repeat;
@@ -19,7 +44,7 @@
   }
 
   &__visible-content {
-    height: 500px;
+    height: 482px;
     width: 350px;
     margin: 0 30px;
     overflow: hidden;

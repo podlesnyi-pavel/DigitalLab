@@ -3,43 +3,72 @@
 
   &__inner {
     display: flex;
+    justify-content: center;
     @include style-title;
     color: $color-title;
+
+    @media (min-width: 1170px) {
+      justify-content: flex-start;
+    }
   }
 
   &__img {
-    display: block;
-    max-height: 553px;
-    max-width: 400px;
-    margin-right: 76px;
+    display: none;
+
+    @media (min-width: 1170px) {
+      display: block;
+      max-height: 553px;
+      max-width: 400px;
+      margin-right: 76px;
+    }
   }
 
   &__descr {
     max-width: 542px;
-    padding: 97px 0 32px;
+
+    @media (min-width: 1170px) {
+      padding: 97px 0 32px;
+    }
   }
 
   &__title {
     margin: 0;
-    font-size: 44px;
-    line-height: 53px;
+    font-size: 33px;
+    line-height: 31px;
+
+    @media (min-width: 576px) {
+      font-size: 44px;
+      line-height: 44px;
+    }
   }
 
   &__subtitle {
     margin-top: 35px;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 36px;
     color: $color-blue;
+
+    @media (min-width: 576px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
   &__download-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 11px;
+
+    @media (min-width: 576px) {
+      justify-content: space-between;
+    }
   }
 
   &__list {
-    align-self: flex-end;
+    @media (min-width: 576px) {
+      align-self: flex-end;
+    }
   }
 
   &__item {
@@ -73,9 +102,14 @@
   &__qr-code-wrapper {
     height: 125px;
     width: 125px;
+    margin-top: 15px;
     padding: 8px;
     border-radius: 10px;
     background-color: $color-white;
+
+    @media (min-width: 576px) {
+      margin-top: 0;
+    }
   }
 
   &__qr-code {
@@ -85,22 +119,30 @@
   &__download-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
+    margin-top: 15px;
+
+    @media (min-width: 576px) {
+      margin-top: 35px;
+    }
   }
 
   &__download-button {
-    height: 80px;
+    height: 40px;
     width: calc(50% - 16px);
     max-width: 255px;
     border-radius: 10px;
     background-color: $color-black;
 
+    @media (min-width: 576px) {
+      height: 80px;
+    }
+
     &--google {
-      background: url("../images/application/google_play.svg") center/cover no-repeat;
+      background: url("../images/application/google_play.svg") center/contain no-repeat;
     }
 
     &--app {
-      background: url("../images/application/app_store.svg") center/cover no-repeat;
+      background: url("../images/application/app_store.svg") center/contain no-repeat;
     }
   }
 }

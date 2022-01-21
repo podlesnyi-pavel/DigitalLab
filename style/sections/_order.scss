@@ -1,16 +1,25 @@
 .order {
-  padding: 204px 0 27px;
+  padding: 30px 0 27px;
   background: url('../images/order-bg.jpg') center/cover no-repeat;
+
+  @media (min-width: 768px) {
+    padding: 204px 0 27px;
+  }
 
   &__form {
     display: flex;
     flex-direction: column;
-    width: 540px;
-    margin: 50px auto 0;
-    padding: 75px 80px;
+    max-width: 540px;
+    margin: 30px auto 0;
+    padding: 20px;
     border-radius: 10px;
     background-color: $color-white;
     box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 576px) {
+      margin: 50px auto 0;
+      padding: 75px 80px;
+    }
   }
 
   &__label {
@@ -18,7 +27,11 @@
     flex-direction: column;
 
     &:not(:first-child) {
-      margin-top: 25px;
+      margin-top: 20px;
+
+      @media (min-width: 576px) {
+        margin-top: 25px;
+      }
     }
 
     & > span {
@@ -31,7 +44,7 @@
   }
 
   &__input {
-    margin-top: 15px;
+    margin-top: 4px;
     padding: 10px 15px;
     border: 1px solid $color-gray-line;
     border-radius: 20px;
@@ -39,13 +52,21 @@
     line-height: 19px;
     font-family: inherit;
 
+    @media (min-width: 576px) {
+      margin-top: 15px;
+    }
+
     &::placeholder {
       color: $color-gray-line;
     }
   }
 
   &__button {
-    margin-top: 50px;
+    margin-top: 30px;
     align-self: center;
+
+    @media (min-width: 576px) {
+      margin-top: 50px;
+    }
   }
 }
