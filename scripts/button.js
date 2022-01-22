@@ -5,6 +5,7 @@ export const button = () => {
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
     });
   });
 };

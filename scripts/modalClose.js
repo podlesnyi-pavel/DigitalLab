@@ -4,11 +4,17 @@ export const modalClose = () => {
 
   close.addEventListener('click', () => {
     modal.style.display = 'none';
+    srollOff();
   });
 
   modal.addEventListener('click', (e) => {
     if (e.target.className === 'modal') {
       modal.style.display = 'none';
+      srollOff();
     }
   });
 };
+
+function srollOff() {
+  document.body.style.overflow = 'auto';
+}
