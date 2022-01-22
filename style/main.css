@@ -573,7 +573,14 @@ button {
 }
 
 .application {
-  background: linear-gradient(180deg, #fff 0%, #fff 10%, #F9F9FA 10%, #F9F9FA 100%);
+  padding: 20px 0;
+  background: #F9F9FA;
+}
+
+@media (min-width: 1170px) {
+  .application {
+    background: linear-gradient(180deg, #fff 0%, #fff 10%, #F9F9FA 10%, #F9F9FA 100%);
+  }
 }
 
 .application__inner {
@@ -687,18 +694,34 @@ button {
   text-decoration: underline;
 }
 
+.application__download-wrap-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+  .application__download-wrap-mobile {
+    display: none;
+  }
+}
+
 .application__qr-code-wrapper {
   height: 125px;
   width: 125px;
-  margin-top: 15px;
   padding: 8px;
   border-radius: 10px;
   background-color: #fff;
 }
 
+.application__qr-code-wrapper--desktop {
+  display: none;
+}
+
 @media (min-width: 576px) {
-  .application__qr-code-wrapper {
-    margin-top: 0;
+  .application__qr-code-wrapper--desktop {
+    display: block;
   }
 }
 
@@ -709,7 +732,6 @@ button {
 .application__download-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
 }
 
 @media (min-width: 576px) {
@@ -718,10 +740,30 @@ button {
   }
 }
 
+.application__download-buttons--desktop {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .application__download-buttons--desktop {
+    display: flex;
+  }
+}
+
+.application__download-buttons--mobile {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.application__download-buttons--mobile > :not(:first-child) {
+  margin-top: 5px;
+}
+
 .application__download-button {
-  height: 40px;
+  height: 50px;
   width: calc(50% - 16px);
   max-width: 255px;
+  min-width: 145px;
   border-radius: 10px;
   background-color: #000;
 }
