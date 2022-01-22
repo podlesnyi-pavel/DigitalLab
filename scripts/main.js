@@ -1,4 +1,5 @@
 import { form } from './form.js';
+import { menuMobile } from './menuMobile.js';
 
 // certificate slider
 const slider = document.querySelector('.slider');
@@ -88,3 +89,4 @@ init();
 
 
 form();
+menuMobile();

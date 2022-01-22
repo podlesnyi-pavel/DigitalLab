@@ -1,0 +1,14 @@
+.open-close-button {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 25px;
+  transition: border $transation-duration-default;
+
+  &:hover {
+    border: 1px solid $color-blue;
+  }
+}

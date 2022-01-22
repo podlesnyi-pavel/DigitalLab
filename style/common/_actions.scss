@@ -102,42 +102,11 @@
       background-color: $color-blue;
       transition: width $transation-duration-default;
     }
-  }
-}
 
-.menu {
-  display: flex;
-
-  &__item {
-    position: relative;
-
-    &:not(:first-child) {
-      margin-left: 10px;
-
-      @media (min-width: 576px) {
-        margin-left: 25px;
+    &--mobile {
+      &:not(:first-child) {
+        margin: 10px 0;
       }
     }
-
-    &:hover::after {
-      width: 100%;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: block;
-      height: 2px;
-      width: 0;
-      background-color: $color-blue;
-      transition: width $transation-duration-default;
-    }
-  }
-
-  &__link {
-    color: inherit;
   }
 }

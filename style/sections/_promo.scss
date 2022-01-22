@@ -7,10 +7,16 @@
     justify-content: center;
     min-height: calc(100vh - #{$height-header});
     @include style-title;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 46px;
+    line-height: 53px;
     color: $color-white;
+
+    @media (min-width: 576px) {
+      font-size: 60px;
+      line-height: 72px;
+    }
   }
+
   &__text {
     margin-bottom: 85px;
   }
