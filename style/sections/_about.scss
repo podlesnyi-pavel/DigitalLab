@@ -4,6 +4,7 @@ $height-decor-mobile: 50px;
 .about {
   position: relative;
   background-color: $color-bg-gray;
+  padding-top: 50px;
   padding-bottom: $height-decor-mobile;
 
   @media (min-width: 576px) {

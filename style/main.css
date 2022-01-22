@@ -361,6 +361,12 @@ button {
   overflow: hidden;
 }
 
+@media (min-width: 576px) {
+  .slider__visible-content {
+    width: 300px;
+  }
+}
+
 .slider__visible-content--reviews {
   height: auto;
   width: calc(445px * 2 + 30px);
@@ -399,6 +405,7 @@ button {
 .menu-mobile {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 0;
   z-index: 200;
   transform: translateX(100%);
@@ -407,13 +414,24 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 14px 14px 25px;
-  height: 100vh;
   width: 70vw;
   background-color: #fff;
   font-family: "Acrobat", sans-serif;
   font-weight: 800;
   font-size: 20px;
   transition: transform 0.3s;
+}
+
+@media (min-width: 576px) {
+  .menu-mobile {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-mobile {
+    width: 40vw;
+  }
 }
 
 .header {
@@ -425,10 +443,11 @@ button {
 }
 
 .promo__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 108px);
   font-family: "Acrobat", sans-serif;
   font-weight: 800;
   font-size: 46px;
@@ -443,6 +462,24 @@ button {
   }
 }
 
+.promo__inner:before {
+  content: '';
+  position: absolute;
+  bottom: -85px;
+  right: 50px;
+  z-index: 500;
+  display: none;
+  height: 600px;
+  width: 350px;
+  background: url("../images/bottle.png") center/contain no-repeat;
+}
+
+@media (min-width: 768px) {
+  .promo__inner:before {
+    display: block;
+  }
+}
+
 .promo__text {
   margin-bottom: 85px;
 }
@@ -450,6 +487,7 @@ button {
 .about {
   position: relative;
   background-color: #F9F9FA;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 

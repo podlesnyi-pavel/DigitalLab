@@ -2,6 +2,7 @@
   background: url('../images/promo-bg.jpg') center/cover no-repeat;
 
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +15,22 @@
     @media (min-width: 576px) {
       font-size: 60px;
       line-height: 72px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -85px;
+      right: 50px;
+      z-index: 500;
+      display: none;
+      height: 600px;
+      width: 350px;
+      background: url('../images/bottle.png') center/contain no-repeat;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
     }
   }
 

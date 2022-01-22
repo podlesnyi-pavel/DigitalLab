@@ -32,38 +32,38 @@ slider.querySelector('.slider__btn--right')
 });
 
 // reviews slider
-const sliderReviews = document.querySelector('.slider--reviews');
-const sliderVisibleContentReviews = sliderReviews
-  .querySelector('.slider__visible-content--reviews');
-const sliderLineReviews = sliderVisibleContentReviews
-  .querySelector('.slider__line--reviews');
+// const sliderReviews = document.querySelector('.slider--reviews');
+// const sliderVisibleContentReviews = sliderReviews
+//   .querySelector('.slider__visible-content--reviews');
+// const sliderLineReviews = sliderVisibleContentReviews
+//   .querySelector('.slider__line--reviews');
 
-let widthReviewsSlider;
-let offset = 0;
+// let widthReviewsSlider;
+// let offset = 0;
 
-sliderReviews
-  .querySelector('.slider__btn--left--reviews')
-  .addEventListener('click', () => {
-    offset -= widthReviewsSlider;
+// sliderReviews
+//   .querySelector('.slider__btn--left--reviews')
+//   .addEventListener('click', () => {
+//     offset -= widthReviewsSlider;
 
-    if (offset < 0) {
-      offset = widthReviewsSlider;
-    }
+//     if (offset < 0) {
+//       offset = widthReviewsSlider;
+//     }
 
-    sliderLineReviews.style.transform = `translate(-${offset}px)`;
-});
+//     sliderLineReviews.style.transform = `translate(-${offset}px)`;
+// });
 
-sliderReviews
-  .querySelector('.slider__btn--right--reviews')
-  .addEventListener('click', () => {
-    offset += widthReviewsSlider;
+// sliderReviews
+//   .querySelector('.slider__btn--right--reviews')
+//   .addEventListener('click', () => {
+//     offset += widthReviewsSlider;
 
-    if (offset === widthReviewsSlider * 2) {
-      offset = 0;
-    }
+//     if (offset === widthReviewsSlider * 2) {
+//       offset = 0;
+//     }
 
-    sliderLineReviews.style.transform = `translate(-${offset}px)`;
-});
+//     sliderLineReviews.style.transform = `translate(-${offset}px)`;
+// });
 
 // common
 function init() {
@@ -75,7 +75,7 @@ function init() {
     image.style.height = 'auto';
   });
 
-  widthReviewsSlider = sliderVisibleContentReviews.offsetWidth;
+  // widthReviewsSlider = sliderVisibleContentReviews.offsetWidth;
 
   rollSlider();
 }

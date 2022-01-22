@@ -49,6 +49,10 @@
     margin: 0 30px;
     overflow: hidden;
 
+    @media (min-width: 576px) {
+      width: 300px;
+    }
+
     &--reviews {
       height: auto;
       width: calc(445px * 2 + 30px);
