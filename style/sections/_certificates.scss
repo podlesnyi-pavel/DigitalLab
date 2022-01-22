@@ -43,14 +43,19 @@
   }
 
   &__awards {
+    max-height: 150px;
     width: 100%;
     max-width: 460px;
     margin-top: 20px;
+    object-fit: contain;
 
     @media (min-width: 768px) {
-      position: relative;
-      left: -20px;
       margin-top: 53px;
+    }
+
+    @media (min-width: 1180px) {
+      position: relative;
+      left: -57px;
     }
   }
 }

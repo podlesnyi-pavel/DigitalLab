@@ -1,3 +1,5 @@
+$width-review: 445px;
+
 .slider {
   display: flex;
   flex-direction: column;
@@ -44,19 +46,28 @@
   }
 
   &__visible-content {
-    height: 482px;
-    width: 350px;
+    display: flex;
+    align-items: center;
+    height: 334px;
+    width: 242px;
     margin: 0 30px;
+    border-radius: 4px;
     overflow: hidden;
 
     @media (min-width: 576px) {
-      width: 300px;
+      height: 482px;
+      width: 350px;
     }
 
     &--reviews {
       height: auto;
-      width: calc(445px * 2 + 30px);
+      width: $width-review;
+
+      @media (min-width: 1170px) {
+        width: calc(#{$width-review} * 2 + 30px);
+      }
     }
+
   }
 
   &__line {
@@ -64,9 +75,16 @@
     transition: transform $transation-duration-default;
   }
 
+  &__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
   &__review {
     min-height: 250px;
-    min-width: 445px;
+    min-width: $width-review;
     padding: 20px;
     border-radius: 10px;
     background-color: $color-white;

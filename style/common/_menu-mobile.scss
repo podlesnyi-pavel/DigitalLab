@@ -1,15 +1,15 @@
 .menu-mobile {
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
-  z-index: 200;
+  z-index: 600;
   transform: translateX(100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 14px 14px 25px;
+  height: 100vh;
   width: 70vw;
   background-color: $color-white;
   @include style-title;

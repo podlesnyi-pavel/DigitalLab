@@ -16,11 +16,20 @@
   &:active {
     border: 2px solid $color-black;
     color: $color-black;
-    box-shadow: 0 0 8px $color-blue;
   }
 
   &--size--small {
     height: 30px;
     width: 102px;
+  }
+
+  &--promo {
+    &:hover,
+    &:focus,
+    &:active {
+      border: 2px solid $color-black;
+      background-color: $color-white;
+      color: $color-black;
+    }
   }
 }

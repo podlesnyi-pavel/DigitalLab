@@ -140,12 +140,17 @@ button {
 .button:hover, .button:focus, .button:active {
   border: 2px solid #000;
   color: #000;
-  box-shadow: 0 0 8px #00A9E3;
 }
 
 .button--size--small {
   height: 30px;
   width: 102px;
+}
+
+.button--promo:hover, .button--promo:focus, .button--promo:active {
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
 }
 
 .title {
@@ -355,26 +360,43 @@ button {
 }
 
 .slider__visible-content {
-  height: 482px;
-  width: 350px;
+  display: flex;
+  align-items: center;
+  height: 334px;
+  width: 242px;
   margin: 0 30px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 @media (min-width: 576px) {
   .slider__visible-content {
-    width: 300px;
+    height: 482px;
+    width: 350px;
   }
 }
 
 .slider__visible-content--reviews {
   height: auto;
-  width: calc(445px * 2 + 30px);
+  width: 445px;
+}
+
+@media (min-width: 1170px) {
+  .slider__visible-content--reviews {
+    width: calc(445px * 2 + 30px);
+  }
 }
 
 .slider__line {
   display: flex;
   transition: transform 0.3s;
+}
+
+.slider__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .slider__review {
@@ -405,15 +427,15 @@ button {
 .menu-mobile {
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
-  z-index: 200;
+  z-index: 600;
   transform: translateX(100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 14px 14px 25px;
+  height: 100vh;
   width: 70vw;
   background-color: #fff;
   font-family: "Acrobat", sans-serif;
@@ -936,16 +958,23 @@ button {
 }
 
 .certificates__awards {
+  max-height: 150px;
   width: 100%;
   max-width: 460px;
   margin-top: 20px;
+  object-fit: contain;
 }
 
 @media (min-width: 768px) {
   .certificates__awards {
-    position: relative;
-    left: -20px;
     margin-top: 53px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .certificates__awards {
+    position: relative;
+    left: -57px;
   }
 }
 
