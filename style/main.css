@@ -45,17 +45,25 @@ button {
   display: none;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   background: rgba(26, 36, 55, 0.35);
 }
 
 .modal__close {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 27px;
+  right: 27px;
   height: 24px;
   width: 24px;
   border: none;
   background: url("../images/icons/close.png") center/cover no-repeat;
+}
+
+@media (min-width: 576px) {
+  .modal__close {
+    top: 50px;
+    right: 50px;
+  }
 }
 
 .logo {
@@ -118,7 +126,7 @@ button {
 }
 
 .menu__item--mobile {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
 }
@@ -128,22 +136,49 @@ button {
 }
 
 .menu__link {
+  display: block;
+  width: 100%;
   color: inherit;
 }
 
 .open-close-button {
   position: absolute;
-  top: 25px;
-  right: 10px;
+  top: 40px;
+  right: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 24px;
+  padding: 0;
   border: 1px solid transparent;
   border-radius: 4px;
-  background-color: transparent;
-  font-size: 25px;
-  transition: border 0.3s;
+  background-color: #fff;
+  transition: transform 0.3s;
 }
 
-.open-close-button:hover {
-  border: 1px solid #00A9E3;
+.open-close-button--open:hover > :nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.open-close-button--close {
+  background: url("../images/icons/close.png") center/cover no-repeat;
+}
+
+.open-close-button--close:hover {
+  transform: rotate(180deg);
+}
+
+.open-close-button__span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transition: transform 0.3s;
+}
+
+.open-close-button__span:not(:first-child) {
+  margin-top: 2px;
 }
 
 .button {
@@ -216,6 +251,7 @@ button {
 }
 
 .actions--mobile {
+  position: relative;
   display: block;
 }
 
@@ -406,6 +442,12 @@ button {
 
 @media (min-width: 576px) {
   .slider__visible-content--reviews {
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider__visible-content--reviews {
     width: 445px;
   }
 }
@@ -439,8 +481,14 @@ button {
 
 @media (min-width: 576px) {
   .slider__review {
-    min-width: 445px;
+    min-width: 350px;
     padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider__review {
+    min-width: 445px;
   }
 }
 
@@ -558,19 +606,31 @@ button {
   background-color: #fff;
   font-family: "Acrobat", sans-serif;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 26px;
   transition: transform 0.3s;
 }
 
 @media (min-width: 576px) {
   .menu-mobile {
     width: 50vw;
+    font-size: 34px;
+    line-height: 34px;
   }
 }
 
 @media (min-width: 768px) {
   .menu-mobile {
     width: 40vw;
+    font-size: 37px;
+    line-height: 37px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-mobile {
+    width: 40vw;
+    font-size: 47px;
+    line-height: 47px;
   }
 }
 

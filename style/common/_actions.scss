@@ -8,6 +8,7 @@
   }
 
   &--mobile {
+    position: relative;
     display: block;
 
     @media (min-width: 992px) {

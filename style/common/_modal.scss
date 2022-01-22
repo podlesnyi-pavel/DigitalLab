@@ -8,15 +8,21 @@
   display: none;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   background: rgba(26, 36, 55, 0.35);
 
   &__close  {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 27px;
+    right: 27px;
     height: 24px;
     width: 24px;
     border: none;
     background: url('../images/icons/close.png') center/cover no-repeat;
+
+    @media (min-width: 576px) {
+      top: 50px;
+      right: 50px;
+    }
   }
 }

@@ -35,7 +35,7 @@
     }
 
     &--mobile {
-      width: 60%;
+      width: 70%;
       margin: 0 auto;
       text-align: center;
 
@@ -46,6 +46,8 @@
   }
 
   &__link {
+    display: block;
+    width: 100%;
     color: inherit;
   }
 }
