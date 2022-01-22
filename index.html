@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Небесна Криниця</title>
     <link rel="stylesheet" href="./style/main.css">
-    <script defer src="./index.js"></script>
+    <script type="module" defer src="./scripts/main.js"></script>
   </head>
   <body class="page">
     <header class="header actions actions--header" id="header">
@@ -28,7 +28,7 @@
                 <a href="#products" class="menu__link">Товары</a>
               </li>
               <li class="menu__item">
-                <a href="application" class="menu__link">Приложение</a>
+                <a href="#application" class="menu__link">Приложение</a>
               </li>
               <li class="menu__item">
                 <a href="#reviews" class="menu__link">Отзывы</a>
@@ -340,7 +340,7 @@
         </div>
       </section>
 
-      <section class="application">
+      <section class="application" id="application">
         <div class="container">
           <div class="application__inner">
             <img
@@ -466,7 +466,7 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <h2 class="reviews__title title">Отзывы</h2>
 
@@ -598,7 +598,7 @@
                 </a>
               </li>
               <li class="menu__item">
-                <a href="application" class="menu__link">
+                <a href="#application" class="menu__link">
                   Приложение
                 </a>
               </li>

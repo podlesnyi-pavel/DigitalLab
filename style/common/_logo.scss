@@ -1,0 +1,14 @@
+.logo {
+  height: 80px;
+  width: 140px;
+  padding: 6px 10px;
+  border-radius: 10px;
+
+  &--bgc--white {
+    background-color: $color-white;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

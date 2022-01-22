@@ -1,3 +1,5 @@
+import { form } from './form.js';
+
 // certificate slider
 const slider = document.querySelector('.slider');
 const sliderVisibleContent = slider.querySelector('.slider__visible-content');
@@ -81,5 +83,8 @@ function rollSlider() {
   sliderLine.style.transform = `translate(-${+index * width}px)`;
 }
 
-window.addEventListener('resize', init);
+// window.addEventListener('resize', init);
 init();
+
+
+form();
