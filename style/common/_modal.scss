@@ -1,0 +1,22 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 700;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(26, 36, 55, 0.35);
+
+  &__close  {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 24px;
+    width: 24px;
+    border: none;
+    background: url('../images/icons/close.png') center/cover no-repeat;
+  }
+}

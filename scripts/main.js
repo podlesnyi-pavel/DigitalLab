@@ -1,5 +1,7 @@
 import { form } from './form.js';
 import { menuMobile } from './menuMobile.js';
+import { modalCloseButton } from './modalCloseButton.js';
+import { button } from './button.js';
 
 // certificate slider
 const slider = document.querySelector('.slider');
@@ -101,3 +103,5 @@ window.addEventListener('resize', init);
 init();
 form();
 menuMobile();
+modalCloseButton();
+button();

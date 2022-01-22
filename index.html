@@ -8,7 +8,6 @@
     <script type="module" defer src="./scripts/main.js"></script>
   </head>
   <body class="page">
-    
     <div class="menu-mobile">
       <button class="open-close-button open-close-button--close">X</button>
 
@@ -56,6 +55,63 @@
       <button class="button">
         Заказать доставку
       </button>
+    </div>
+
+    <div class="modal">
+      <form class="form form--modal" action="#">
+        <button class="modal__close"></button>
+
+        <label class="form__label" for="name">
+          <span>Как вас зовут?</span>
+          <input
+            class="form__input"
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Иванов Иван Иванович"
+            required
+          >
+        </label>
+
+        <label class="form__label" for="tel">
+          <span>Номер телефона</span>
+          <input
+            class="form__input"
+            id="tel"
+            type="text"
+            name="tel"
+            placeholder="050 123 4567"
+            required
+          >
+        </label>
+
+        <label class="form__label" for="address">
+          <span>Адрес доставки</span>
+          <input
+            class="form__input"
+            id="address"
+            type="text"
+            name="address"
+            placeholder="ул. Макара Мазая, 66/1, кв. 6"
+            required
+          >
+        </label>
+
+        <label class="form__label" for="date">
+          <span>Когда доставить?</span>
+          <input
+            class="form__input"
+            id="date"
+            type="text"
+            name="date"
+            placeholder="10 ноября, 9:00-18:00"
+            required
+          >
+        </label>
+        <button class="button form__button" type="submit">
+          Заказать доставку
+        </button>
+      </form>
     </div>
 
     <header class="header actions actions--header" id="header">
@@ -604,51 +660,55 @@
         <div class="container">
           <h2 class="title title--color--white">Оформление заказа</h2>
 
-          <form class="order__form" action="#">
-            <label class="order__label" for="name">
+          <form class="order--form form" action="#">
+            <label class="form__label" for="name1">
               <span>Как вас зовут?</span>
               <input
-                class="order__input"
-                id="name"
+                class="form__input"
+                id="name1"
                 type="text"
                 name="name"
                 placeholder="Иванов Иван Иванович"
+                required
               >
             </label>
 
-            <label class="order__label" for="tel">
+            <label class="form__label" for="tel1">
               <span>Номер телефона</span>
               <input
-                class="order__input"
-                id="tel"
+                class="form__input"
+                id="tel1"
                 type="text"
                 name="tel"
                 placeholder="050 123 4567"
+                required
               >
             </label>
 
-            <label class="order__label" for="address">
+            <label class="form__label" for="address1">
               <span>Адрес доставки</span>
               <input
-                class="order__input"
-                id="address"
+                class="form__input"
+                id="address1"
                 type="text"
                 name="address"
                 placeholder="ул. Макара Мазая, 66/1, кв. 6"
+                required
               >
             </label>
 
-            <label class="order__label" for="date">
+            <label class="form__label" for="date1">
               <span>Когда доставить?</span>
               <input
-                class="order__input"
-                id="date"
+                class="form__input"
+                id="date1"
                 type="text"
                 name="date"
                 placeholder="10 ноября, 9:00-18:00"
+                required
               >
             </label>
-            <button class="button order__button" type="submit">
+            <button class="button form__button" type="submit">
               Заказать доставку
             </button>
           </form>
