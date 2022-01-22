@@ -7,7 +7,7 @@ $height-decor-mobile: 50px;
   padding-top: 50px;
   padding-bottom: $height-decor-mobile;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     padding-bottom: $height-decor + 34px;
   }
 
@@ -20,7 +20,7 @@ $height-decor-mobile: 50px;
     width: 100%;
     background: url('../images/decor-about.jpg') center/cover no-repeat;
 
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       height: $height-decor;
     }
   }

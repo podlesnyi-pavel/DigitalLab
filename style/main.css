@@ -401,7 +401,13 @@ button {
 
 .slider__visible-content--reviews {
   height: auto;
-  width: 445px;
+  width: 300px;
+}
+
+@media (min-width: 576px) {
+  .slider__visible-content--reviews {
+    width: 445px;
+  }
 }
 
 @media (min-width: 1170px) {
@@ -424,11 +430,24 @@ button {
 
 .slider__review {
   min-height: 250px;
-  min-width: 445px;
-  padding: 20px;
+  min-width: 300px;
+  padding: 10px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 576px) {
+  .slider__review {
+    min-width: 445px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .slider__review:nth-child(2n) {
+    margin-left: 30px;
+  }
 }
 
 .slider__name {
@@ -612,7 +631,7 @@ button {
   padding-bottom: 50px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .about {
     padding-bottom: 144px;
   }
@@ -628,7 +647,7 @@ button {
   background: url("../images/decor-about.jpg") center/cover no-repeat;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .about::after {
     height: 110px;
   }
@@ -1010,17 +1029,18 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0 80px;
+  padding: 50px 0 20px;
+}
+
+@media (min-width: 992px) {
+  .certificates__inner {
+    padding: 50px 0 40px;
+  }
 }
 
 @media (min-width: 1180px) {
   .certificates__inner {
     flex-direction: row;
-  }
-}
-
-@media (min-width: 768px) {
-  .certificates__inner {
     padding: 100px 0 80px;
   }
 }
@@ -1104,6 +1124,12 @@ button {
 }
 
 @media (min-width: 768px) {
+  .order {
+    padding: 100px 0 27px;
+  }
+}
+
+@media (min-width: 992px) {
   .order {
     padding: 204px 0 27px;
   }

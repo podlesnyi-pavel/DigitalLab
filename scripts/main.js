@@ -52,27 +52,43 @@ let widthReviewsSlider;
 sliderReviews
   .querySelector('.slider__btn--left--reviews')
   .addEventListener('click', () => {
-    indexReview--;
-    console.log('left');
+    if (widthReviewsSlider < 500) {
+      indexReview--;
 
-    if (indexReview < 0) {
-      indexReview = sliderReviewsArray.length - 1;
+      if (indexReview < 0) {
+        indexReview = sliderReviewsArray.length - 1;
+      }
+
+      rollSliderReviews(indexReview);
+    } else {
+      indexReview--;
+
+      if (indexReview < 0) {
+        indexReview = Math.ceil(sliderReviewsArray.length / 2) - 1;
+      }
+
+      rollSliderReviews(indexReview);
     }
-
-    rollSliderReviews();
 });
 
 sliderReviews
   .querySelector('.slider__btn--right--reviews')
   .addEventListener('click', () => {
-    indexReview++;
-    console.log('right');
+    if (widthReviewsSlider < 500) {
+      indexReview++;
 
-    if (indexReview === sliderReviewsArray.length) {
-      indexReview = 0;
+      if (indexReview === sliderReviewsArray.length) {
+        indexReview = 0;
+      }
+    } else {
+      indexReview++;
+
+      if (indexReview === Math.ceil(sliderReviewsArray.length / 2)) {
+        indexReview = 0;
+      }
     }
 
-    rollSliderReviews();
+    rollSliderReviews(indexReview);
 });
 
 // common
@@ -88,6 +104,7 @@ function init() {
   widthReviewsSlider = sliderVisibleContentReviews.offsetWidth;
 
   rollSlider();
+  rollSliderReviews();
 }
 
 function rollSlider() {
@@ -95,7 +112,7 @@ function rollSlider() {
 }
 
 function rollSliderReviews() {
-  sliderLineReviews.style.transform = `translate(-${indexReview * widthReviewsSlider}px)`;
+  sliderLineReviews.style.transform = `translate(-${+indexReview * widthReviewsSlider}px)`;
 }
 
 window.addEventListener('resize', init);
