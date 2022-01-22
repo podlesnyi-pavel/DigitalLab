@@ -42,32 +42,35 @@ const sliderVisibleContentReviews = sliderReviews
   .querySelector('.slider__visible-content--reviews');
 const sliderLineReviews = sliderVisibleContentReviews
   .querySelector('.slider__line--reviews');
+const sliderReviewsArray = sliderReviews.querySelectorAll('.slider__review');
 
+let indexReview = 0;
 let widthReviewsSlider;
-let offset = 0;
 
 sliderReviews
   .querySelector('.slider__btn--left--reviews')
   .addEventListener('click', () => {
-    offset -= widthReviewsSlider;
+    indexReview--;
+    console.log('left');
 
-    if (offset < 0) {
-      offset = widthReviewsSlider;
+    if (indexReview < 0) {
+      indexReview = sliderReviewsArray.length - 1;
     }
 
-    sliderLineReviews.style.transform = `translate(-${offset}px)`;
+    rollSliderReviews();
 });
 
 sliderReviews
   .querySelector('.slider__btn--right--reviews')
   .addEventListener('click', () => {
-    offset += widthReviewsSlider;
+    indexReview++;
+    console.log('right');
 
-    if (offset === widthReviewsSlider * 2) {
-      offset = 0;
+    if (indexReview === sliderReviewsArray.length) {
+      indexReview = 0;
     }
 
-    sliderLineReviews.style.transform = `translate(-${offset}px)`;
+    rollSliderReviews();
 });
 
 // common
@@ -87,6 +90,10 @@ function init() {
 
 function rollSlider() {
   sliderLine.style.transform = `translate(-${+index * width}px)`;
+}
+
+function rollSliderReviews() {
+  sliderLineReviews.style.transform = `translate(-${indexReview * widthReviewsSlider}px)`;
 }
 
 window.addEventListener('resize', init);
