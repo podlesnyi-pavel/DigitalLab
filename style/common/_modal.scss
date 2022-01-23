@@ -25,4 +25,20 @@
       right: 50px;
     }
   }
+
+  &__name {
+    width: 70%;
+    margin: 0 auto;
+    @include style-title;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: $color-blue;
+
+    @media (min-width: 576px) {
+      width: 80%;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
 }

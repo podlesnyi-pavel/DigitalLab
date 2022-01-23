@@ -66,6 +66,25 @@ button {
   }
 }
 
+.modal__name {
+  width: 70%;
+  margin: 0 auto;
+  font-family: "Acrobat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #00A9E3;
+}
+
+@media (min-width: 576px) {
+  .modal__name {
+    width: 80%;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
 .logo {
   height: 80px;
   width: 140px;
@@ -510,6 +529,20 @@ button {
   margin-top: 14px;
 }
 
+.touch-slider-container {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border: 1px solid #000;
+  transition: transform 0.3s;
+  cursor: grab;
+}
+
+.touch-slide {
+  width: 100%;
+  height: 100%;
+}
+
 .form {
   position: relative;
   display: flex;
@@ -537,14 +570,11 @@ button {
 .form__label {
   display: flex;
   flex-direction: column;
-}
-
-.form__label:not(:first-child) {
   margin-top: 20px;
 }
 
 @media (min-width: 576px) {
-  .form__label:not(:first-child) {
+  .form__label {
     margin-top: 25px;
   }
 }
