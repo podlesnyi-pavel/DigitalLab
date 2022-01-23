@@ -432,9 +432,17 @@ button {
   background: url("../images/arrowSlider.svg") center/contain no-repeat;
 }
 
+.slider__btn--left--reviews {
+  margin-bottom: 10px;
+}
+
 .slider__btn--right {
   transform: rotate(180deg);
   background: url("../images/arrowSlider.svg") center/contain no-repeat;
+}
+
+.slider__btn--right--reviews {
+  margin-top: 10px;
 }
 
 .slider__visible-content {
@@ -527,20 +535,6 @@ button {
 
 .slider__text {
   margin-top: 14px;
-}
-
-.touch-slider-container {
-  display: flex;
-  height: 200px;
-  width: 200px;
-  border: 1px solid #000;
-  transition: transform 0.3s;
-  cursor: grab;
-}
-
-.touch-slide {
-  width: 100%;
-  height: 100%;
 }
 
 .form {
